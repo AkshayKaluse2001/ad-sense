@@ -11,7 +11,7 @@ import {
   Row,
 } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import { DASHBOARD, MEDIA_AD, TEXT_AD } from "../constants/routes";
+import { MEDIA_AD, TEXT_AD } from "../constants/routes";
 
 const ads = [
   {

@@ -48,6 +48,7 @@ const Minitable = () => {
       headerName: "Cost",
       field: "cost",
       width: 140,
+      cellRenderer: (params) => `USD ${params.value}`,
     },
     {
       headerName: "Conversions",
@@ -58,6 +59,7 @@ const Minitable = () => {
       headerName: "Revenue",
       field: "revenue",
       width: 130,
+      cellRenderer: (params) => `USD ${params.value}`,
     },
   ];
 

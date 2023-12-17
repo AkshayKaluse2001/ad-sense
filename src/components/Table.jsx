@@ -80,6 +80,7 @@ const Table = () => {
       headerName: "Revenue",
       field: "revenue",
       width: 130,
+      cellRenderer: (params) => `USD ${params.value}`,
     },
   ];
 
