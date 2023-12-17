@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
+import { CREATE_AD, DASHBOARD, MEDIA_AD, TEXT_AD } from "./constants/routes";
+import CreateAd from "./pages/CreateAd";
+import Dashboard from "./pages/Dashboard";
+import MediaAd from "./pages/MediaAd";
+import TextAd from "./pages/TextAd";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App bg-light">
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path={DASHBOARD} element={<Dashboard />} />
+          <Route path={CREATE_AD} element={<CreateAd />} />
+          <Route path={TEXT_AD} element={<TextAd />} />
+          <Route path={MEDIA_AD} element={<MediaAd />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
